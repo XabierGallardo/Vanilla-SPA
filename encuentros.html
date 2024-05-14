@@ -5,8 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuentros</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        #encuentros {
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        .oradores-presentacion { text-align: center; }
+
+        .oradores-presentacion h5, .card-text { font-weight: lighter; }
+
+        #cards {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 390px;
+            height: 615px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 2px solid #d2d2d2;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 390px;
+            height: 390px; 
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card-body {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .card-body button {
+            font-weight: bold;
+        }
+
+        .card-title {
+            font-size: x-large;
+        }
+
+        .btn {
+            padding: 10px;
+            border-radius: 5px;
+            border: 0px;
+            font-size: large;
+        }
+        
+        .arg-uy {
+            color: white;
+            background-color: #0dcaf0;
+        }
+
+        .bra {
+            color: #198753;
+            background-color: #ffc107;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="encuentros">
+        <div class="oradores-presentacion">
+            <h5>SUMATE A LA COMUNIDAD MATERA RIOPLATENSE</h5>
+            <h1>ENCUENTROS</h1>
+        </div>
+
+        <div id="cards">
+            
+            <div class="card">
+                <img src="src/assets/images/muestra-mate.jpg" alt="muestra de mate">
+                <div class="card-body">
+                    <button type="button" class="btn arg-uy">Argentina</button>
+                    <h4 class="card-title pt-2">Río Paraná - Argentina</h4>
+                    <p class="card-text">Este es el encuentro más cercano para los que viven en la Ciudad Autónoma de Buenos Aires. Este año se celebra el encuentro del Paraná en la ciudad argentina de Rosario. Vení a conocer!</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/images/plantacion-mate.jpg" alt="plantacion de yerba">
+                <div class="card-body">
+                    <button type="button" class="btn arg-uy">Uruguay</button>
+                    <h4 class="card-title">Río Uruguay - Uruguay</h4>
+                    <p class="card-text">Para aquellos que viven en territorio uruguayo, este año la cita es Paysandú, cercano a la ciudad uruguaya de Mercedes y las ciudades argentinas de Colón y Concepción del Uruguay.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/images/rio-iguazu.jpg" alt="rio iguazu">
+                <div class="card-body">
+                    <button type="button" class="btn bra">Brasil</button>
+                    <h4 class="card-title pt-2">Río Iguazú - Brasil</h4>
+                    <p class="card-text">Un infaltable de los encuentros, esta vez en territorio brasileño. Nos encontramos en Parque Nacional do Iguaçu, cercano a la provincia de Misiones y para los vecinos de Paraguay.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
