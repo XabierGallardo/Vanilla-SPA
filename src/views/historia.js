@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-    <style>
-    #historia { 
-        padding-top: 20px;
-        width: 70%;
-        height: 600px;
-        margin: 0 auto;
-        display: flex;
-    }
-
-    #historia-img {
-        width: 50%;
-        background-image: url("src/assets/images/estatua-mate.jpg");
-        background-size: cover;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
-
-    #historia-texto {
-        width: 50%;
-        background-color: #353a40;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        font-size: larger;
-        color: white;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .historia-encabezado {
-        font-size: xxx-large;
-    }
-    .historia-emojis {
-        font-size: x-large;
-    }
-    </style>
-</head>
-<body>
+export function historiaView() {
+    return `
     <div id="historia">
         <div id="historia-img"></div>
         <div id="historia-texto">
@@ -50,5 +9,5 @@
             <p>Nuestros ríos materos más que separar unen! Sumate a estos hermosos encuentros y a una comunidad de apasionados de la yerba mate que no para de crecer año tras año. <span class="historia-emojis">&#127754; &#9973; &#127774; &#127796;</span></p>
         </div>
     </div>
-</body>
-</html>
+    `;
+}
