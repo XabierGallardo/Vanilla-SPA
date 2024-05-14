@@ -1,0 +1,94 @@
+/* General */
+body {
+	font-family: monospace;
+    font-size: larger;
+    margin: 0 auto;
+}
+
+
+
+/* Nav */
+#nav-index, #footer-index {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-logo_link, .footer-logo_link, .nav-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links {
+    width: 40%;
+    font-size: x-large;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+}
+
+#nav-logo, #footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo_link, .footer-logo_link { 
+    text-decoration: none;
+}
+
+.nav-logo_link img, .footer-logo_link img { 
+    width: 25px;
+}
+
+#nav-index a {
+    color: #212529;
+}
+
+#nav-index a:hover {
+    color: #008c4b;
+}
+
+.nav-logo_texto, .footer-logo_texto {
+    font-size: xx-large;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+}
+
+.nav-logo_texto { color: #008c4b; }
+
+#lugares img {
+    height: 92vh;
+    background-size: cover;
+}
+
+
+
+
+/* Footer */
+#footer-index { 
+    margin: 0 auto;
+    background-color: #008c4b;
+}
+
+#footer-logo_texto{ 
+    color: white;
+}
+
+#footer-logo_img { 
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#footer-index a { 
+    color: white;
+}
