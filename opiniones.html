@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        #opiniones {
+            margin: 0;
+            padding: 0;
+        }
+
+        #opiniones-tabla {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        #opiniones-tabla thead {
+            background-color: #008c4b;
+            color: white;
+        }
+
+        #opiniones-tabla th,
+        #opiniones-tabla td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #opiniones-tabla tbody tr:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div id="opiniones">
+        <table id="opiniones-tabla">
+            <thead>
+                <tr>
+                    <th>Asunto</th>
+                    <th>Email</th>
+                    <th>Cuerpo</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+
+        </table>
+    </div>
+
+    <script>
+        const urlOpinions = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+
+        async function getOpinions() {
+            try {
+                const response = await fetch(urlOpinions);
+                const opinions = await response.json();
+
+                const tablaBody = document.querySelector('#opiniones-tabla tbody');
+
+                opinions.forEach(opinion => {
+                    const file = document.createElement('tr');
+                    file.innerHTML = `
+                        <td>${opinion.name}</td>
+                        <td>${opinion.email}</td>
+                        <td>${opinion.body}</td>
+                    `;
+                    tablaBody.appendChild(file);
+                });
+            } catch (error) {
+                console.error('Error al obtener las opiniones: \n', error);
+            }
+        }
+
+        getOpinions();
+    </script>
+</body>
+</html>
